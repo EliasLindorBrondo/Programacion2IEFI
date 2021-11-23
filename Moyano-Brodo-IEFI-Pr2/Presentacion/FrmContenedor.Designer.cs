@@ -123,7 +123,7 @@ namespace Presentacion
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(171, 48);
             this.btnInicio.TabIndex = 1;
-            this.btnInicio.Text = "Inicio";
+            this.btnInicio.Text = "Home";
             this.btnInicio.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInicio.UseVisualStyleBackColor = false;
             // 
