@@ -16,6 +16,35 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+        #region Metodos
+        private void Limpiar()
+        {
+            txtCategoria.Text = string.Empty;
+            txtMarca.Text = string.Empty;
+        }
+        #endregion
+
+        #region Eventos
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
 
     }
 }
