@@ -10,8 +10,6 @@ namespace Datos
 {
     public class DatosConexionBD
     {
-
-
         public SqlConnection Conexion;
         public string CadenaConexion = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=IEFIP2;Integrated Security=True";
 

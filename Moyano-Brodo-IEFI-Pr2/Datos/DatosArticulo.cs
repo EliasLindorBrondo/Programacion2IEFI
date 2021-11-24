@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    class DatosArticulo : DatosConexionBD
+    public class DatosArticulo : DatosConexionBD
     {
         public int abmalumno(string accion, Articulo  objarticulo)
         {
@@ -19,15 +19,15 @@ namespace Datos
             if (accion == "Alta")
             {
 
-                orden = "Set dateformat dmy; Insert into Articulo values ('" + objarticulo.Nombre + "'," + objalumno.Dni + ",'" + objalumno.Carrera + "'," + objalumno.Legajo + ",'" + objalumno.Sexo + "','" + objalumno.FechN1.ToShortDateString() + "');";
+                orden = "Set dateformat dmy; Insert into Articulo values ('" + objarticulo.CodArt + "','" + objarticulo.Nombre + "','" + objarticulo.FechaVto.ToShortDateString() + "','" + objarticulo.Categoria + "','" + objarticulo.Marca + "');";
             }
             if (accion == "Modificar")
             {
-                orden = "Set dateformat dmy; update Articulo set Nombre='" + objarticulo.Nombre + "',Carrera ='" + objalumno.Carrera + "',Legajo = " + objalumno.Legajo + ",Sexo ='" + objalumno.Sexo + "',FechaNacimiento ='" + objalumno.FechN1 + "' where Dni = " + objalumno.Dni + "; ";
+                orden = "Set dateformat dmy; update Articulo set nombre='" + objarticulo.Nombre + "',fechaVto ='" + objarticulo.FechaVto + "',NombreCategoria = " + objarticulo.Categoria + ",marca ='" + objarticulo.Marca + "';";
             }
             if (accion == "Borrar")
             {
-                orden = "delete from  Articulo where Nombre='" + objalumno.Nombre + "' and Dni = " + objalumno.Dni + "; ";
+                orden = "delete from  Articulo where codArt='" + objarticulo.CodArt + "'; ";
             }
 
             SqlCommand cmd = new SqlCommand(orden, Conexion);
@@ -39,7 +39,7 @@ namespace Datos
             }
             catch (Exception e)
             {
-                throw new Exception("Error al tratar de guardar,borrar o modificar Alumno", e);
+                throw new Exception("Error al tratar de guardar,borrar o modificar Articulo", e);
             }
             finally
             {
@@ -50,16 +50,16 @@ namespace Datos
 
         }
 
-        public DataSet ListadoAlu(string cual)
+        public DataSet ListadoArt(string cual)
         {
             string orden = string.Empty;
             if (cual != "Todos")
             {
-                orden = "select * from Alumno where Dni = " + int.Parse(cual) + ";";
+                
             }
             else
             {
-                orden = "select * from Alumno;";
+                orden = "select * from Articulo;";
             }
 
             SqlCommand cmd = new SqlCommand(orden, Conexion);
@@ -77,7 +77,7 @@ namespace Datos
             catch (Exception e)
             {
 
-                throw new Exception("Error al listar Alumno", e);
+                throw new Exception("Error al listar Articulo", e);
             }
             finally
             {
