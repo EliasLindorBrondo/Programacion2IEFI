@@ -14,3 +14,5 @@ F:\PROYECTOS\CARRERA\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Presentacion\obj\De
 F:\PROYECTOS\CARRERA\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Presentacion\obj\Debug\Presentacion.exe
 F:\PROYECTOS\CARRERA\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Presentacion\obj\Debug\Presentacion.pdb
 F:\PROYECTOS\CARRERA\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Presentacion\obj\Debug\Presentacion.FrmCategorias.resources
+F:\PROYECTOS\CARRERA\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Presentacion\bin\Debug\Datos.dll
+F:\PROYECTOS\CARRERA\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Presentacion\bin\Debug\Datos.pdb

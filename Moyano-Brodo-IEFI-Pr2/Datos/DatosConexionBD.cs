@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    class DatosConexionBD
+    public class DatosConexionBD
     {
         #region atributos
         public SqlConnection conexion;
-        public string cadenaConexion = @"Data Source=HP-HERNAN;Initial Catalog=IEFIP2;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        public string cadenaConexion = @"Data Source=HP-HERNAN;Initial Catalog=IEFIP2;Integrated Security=True";
         #endregion
 
         #region Constructor
