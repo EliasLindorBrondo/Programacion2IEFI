@@ -15,7 +15,7 @@ namespace Negocios
 
         public int abmarticulo(string accion, Articulo objarticulo)
         {
-            return objDatosArt.abmalumno(accion, objarticulo);
+            return objDatosArt.abmarticulo(accion, objarticulo);
         }
 
         public DataSet ListadoArt(string cual)

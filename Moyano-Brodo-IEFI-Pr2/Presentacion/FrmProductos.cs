@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using Negocios;
+using System.Data.SqlClient;
 
 namespace Presentacion
 {
@@ -16,10 +17,14 @@ namespace Presentacion
     {
         NegArticulo objNegArt = new NegArticulo();
         Articulo objEntArt = new Articulo();
+        public string CadenaConexion = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=IEFIP2;Integrated Security=True";
+        public SqlConnection Conexion;
+       
         public FrmProductos()
         {
+            Conexion = new SqlConnection(CadenaConexion);
             InitializeComponent();
-            gridArticulo.ColumnCount = 6;
+            gridArticulo.ColumnCount = 5;
             gridArticulo.Columns[0].HeaderText = "Codigo";
             gridArticulo.Columns[1].HeaderText = "Nombre";
             gridArticulo.Columns[2].HeaderText = "Categoria";
@@ -30,6 +35,7 @@ namespace Presentacion
             gridArticulo.Columns[1].Width = 100;
             gridArticulo.Columns[3].Width = 150;
             CompletarDG();
+            
             btmodi.Enabled = false;
             btdelete.Enabled = false;
         }
@@ -46,7 +52,7 @@ namespace Presentacion
             {
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
-                 gridArticulo.Rows.Add(dr[0], dr[1], dr[2], dr[3],Convert.ToDateTime(dr[4]).ToShortDateString());
+                    gridArticulo.Rows.Add(dr[0], dr[1], dr[3], dr[4],Convert.ToDateTime(dr[2]).ToShortDateString());
                 }
 
 
@@ -226,6 +232,19 @@ namespace Presentacion
             btguardar.Enabled = false;
             btmodi.Enabled = true;
             btdelete.Enabled = true;
+        }
+
+        private void FrmProductos_Load(object sender, EventArgs e)
+        {
+            SqlCommand comando = new SqlCommand("SELECT NombreCategoria,marca from Categoria;", Conexion);
+            Conexion.Open();
+            SqlDataReader registro = comando.ExecuteReader();
+            while (registro.Read())
+            {
+                comboCategoria.Items.Add(registro["NombreCategoria"].ToString());
+                comboMarca.Items.Add(registro["marca"].ToString());
+            }
+            Conexion.Close();
         }
     }
 

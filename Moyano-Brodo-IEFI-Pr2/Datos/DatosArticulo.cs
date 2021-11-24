@@ -11,7 +11,7 @@ namespace Datos
 {
     public class DatosArticulo : DatosConexionBD
     {
-        public int abmalumno(string accion, Articulo  objarticulo)
+        public int abmarticulo(string accion, Articulo  objarticulo)
         {
             int resultado = -1;
             string orden = string.Empty;
@@ -23,7 +23,7 @@ namespace Datos
             }
             if (accion == "Modificar")
             {
-                orden = "Set dateformat dmy; update Articulo set nombre='" + objarticulo.Nombre + "',fechaVto ='" + objarticulo.FechaVto + "',NombreCategoria = " + objarticulo.Categoria + ",marca ='" + objarticulo.Marca + "';";
+                orden = "Set dateformat dmy; update Articulo set nombre='" + objarticulo.Nombre + "',fechaVto ='" + objarticulo.FechaVto + "',NombreCategoria =' " + objarticulo.Categoria + "',marca ='" + objarticulo.Marca + "';";
             }
             if (accion == "Borrar")
             {

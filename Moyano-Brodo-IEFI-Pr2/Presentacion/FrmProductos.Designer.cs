@@ -59,11 +59,14 @@ namespace Presentacion
             // 
             // gridArticulo
             // 
+            this.gridArticulo.AllowUserToAddRows = false;
+            this.gridArticulo.AllowUserToDeleteRows = false;
             this.gridArticulo.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.gridArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridArticulo.Location = new System.Drawing.Point(12, 224);
             this.gridArticulo.Name = "gridArticulo";
-            this.gridArticulo.Size = new System.Drawing.Size(750, 197);
+            this.gridArticulo.ReadOnly = true;
+            this.gridArticulo.Size = new System.Drawing.Size(621, 214);
             this.gridArticulo.TabIndex = 1;
             this.gridArticulo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridArticulo_CellContentClick);
             // 
@@ -90,6 +93,7 @@ namespace Presentacion
             // 
             // comboCategoria
             // 
+            this.comboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCategoria.FormattingEnabled = true;
             this.comboCategoria.Location = new System.Drawing.Point(135, 150);
             this.comboCategoria.Name = "comboCategoria";
@@ -166,6 +170,7 @@ namespace Presentacion
             // 
             // comboMarca
             // 
+            this.comboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboMarca.FormattingEnabled = true;
             this.comboMarca.Location = new System.Drawing.Point(415, 63);
             this.comboMarca.Name = "comboMarca";
@@ -220,6 +225,7 @@ namespace Presentacion
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmProductos";
             this.Text = "productos";
+            this.Load += new System.EventHandler(this.FrmProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
