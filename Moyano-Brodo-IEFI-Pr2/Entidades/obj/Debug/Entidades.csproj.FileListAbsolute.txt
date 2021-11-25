@@ -1,0 +1,12 @@
+F:\PROYECTOS\CARRERA\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Entidades\bin\Debug\Entidades.dll
+F:\PROYECTOS\CARRERA\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Entidades\bin\Debug\Entidades.pdb
+F:\PROYECTOS\CARRERA\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+F:\PROYECTOS\CARRERA\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+F:\PROYECTOS\CARRERA\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Entidades\obj\Debug\Entidades.dll
+F:\PROYECTOS\CARRERA\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Entidades\obj\Debug\Entidades.pdb
+F:\Proyectos\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Entidades\bin\Debug\Entidades.dll
+F:\Proyectos\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Entidades\bin\Debug\Entidades.pdb
+F:\Proyectos\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+F:\Proyectos\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+F:\Proyectos\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Entidades\obj\Debug\Entidades.dll
+F:\Proyectos\Programacion2IEFI\Moyano-Brodo-IEFI-Pr2\Entidades\obj\Debug\Entidades.pdb

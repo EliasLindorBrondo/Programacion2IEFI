@@ -18,7 +18,7 @@ namespace Presentacion
 
 		}
 		//METODO PARA ABRIR FORMULARIOS EN EL PANEL CONTENEDOR
-		private void AbrirFormularios<FormularioAbrir>() where FormularioAbrir : Form, new()
+		public void AbrirFormularios<FormularioAbrir>() where FormularioAbrir : Form, new()
 		{
 			Form Formularios;
 
@@ -48,12 +48,13 @@ namespace Presentacion
 
         private void btnCategorias_Click(object sender, EventArgs e)
         {
-			AbrirFormularios<FrmCategorias>();
-        }
+			AbrirFormularios<FrmCategorias>();	
+		}
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
 			AbrirFormularios<FrmProductos>();
+			
 		}
 
 
