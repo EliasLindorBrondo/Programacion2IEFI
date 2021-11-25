@@ -44,6 +44,8 @@ namespace Presentacion
             this.comboMarca = new System.Windows.Forms.ComboBox();
             this.btmodi = new System.Windows.Forms.Button();
             this.btdelete = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridArticulo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +89,7 @@ namespace Presentacion
             // txtcod
             // 
             this.txtcod.Location = new System.Drawing.Point(135, 64);
+            this.txtcod.MaxLength = 3;
             this.txtcod.Name = "txtcod";
             this.txtcod.Size = new System.Drawing.Size(65, 20);
             this.txtcod.TabIndex = 3;
@@ -201,12 +204,37 @@ namespace Presentacion
             this.btdelete.UseVisualStyleBackColor = true;
             this.btdelete.Click += new System.EventHandler(this.btdelete_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(30, 192);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(310, 13);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Para crear una nueva Categoria o Marca Presione en Categoria.";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::Presentacion.Properties.Resources.cart;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(639, 404);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 34);
+            this.button1.TabIndex = 17;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkViolet;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
             this.ClientSize = new System.Drawing.Size(781, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btdelete);
             this.Controls.Add(this.btmodi);
             this.Controls.Add(this.comboMarca);
@@ -249,5 +277,7 @@ namespace Presentacion
         private System.Windows.Forms.ComboBox comboMarca;
         private System.Windows.Forms.Button btmodi;
         private System.Windows.Forms.Button btdelete;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button1;
     }
 }
