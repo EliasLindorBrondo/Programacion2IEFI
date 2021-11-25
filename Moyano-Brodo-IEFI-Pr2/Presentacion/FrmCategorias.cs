@@ -269,10 +269,14 @@ namespace Presentacion
             Obj_a_Txt();
         }
 
+
+
+
         #endregion
 
-
-
-
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
