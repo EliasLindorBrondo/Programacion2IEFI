@@ -1,55 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
 
 namespace Datos
 {
     public class DatosConexionBD
     {
-        public SqlConnection Conexion;
-        public string CadenaConexion = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=IEFIP2;Integrated Security=True";
+        #region atributos
+        public SqlConnection conexion;
+        public string cadenaConexion = @"Data Source=HP-HERNAN;Initial Catalog=IEFIP2;Integrated Security=True";
+        #endregion
 
+        #region Constructor
         public DatosConexionBD()
         {
-            Conexion = new SqlConnection(CadenaConexion);
+            conexion = new SqlConnection(cadenaConexion);
         }
+        #endregion
 
-        public void AbrirConex()
+        #region Metodos
+        public void Abrirconexion()
         {
             try
             {
-                if (Conexion.State == ConnectionState.Broken || Conexion.State == ConnectionState.Closed)
-                {
-                    Conexion.Open();
-                }
+                if (conexion.State == ConnectionState.Broken || conexion.State == ConnectionState.Closed)
+                    conexion.Open();
             }
             catch (Exception e)
             {
-
-                throw new Exception("Error al tratar de abrir la conexion", e);
+                throw new Exception("Error al tratar de abrir la conexión", e);
             }
         }
-
-        public void CerrarConex()
+        public void Cerrarconexion()
         {
             try
             {
-                if (Conexion.State == ConnectionState.Open)
-                {
-                    Conexion.Close();
-                }
+                if (conexion.State == ConnectionState.Open)
+                    conexion.Close();
             }
             catch (Exception e)
             {
-
                 throw new Exception("Error al tratar de cerrar la conexión", e);
             }
         }
 
-
+        #endregion
     }
 }

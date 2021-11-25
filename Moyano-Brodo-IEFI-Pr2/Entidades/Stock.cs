@@ -25,7 +25,7 @@ namespace Entidades
             categoria = categ;
             marca = marc;
         }
-        
+
     }
 
 }
